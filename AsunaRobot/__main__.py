@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hello` [🧚‍♀️](https://telegra.ph/file/7274507d4da6ff6f3785d.mp4) `My name is` *Asuna*
+`Hello` [🧚‍♀️](https://telegra.ph/file/c657cde06a1dc14af5796.jpg) `My name is` *Hinata Shôyô*
 `I am powerful  group management bot.
 Build by The Ghost Hunter for Your Telegram Group , I specialize in managing Entertainment type groups.
 You can find my list of available commands with! Hit` *🔰Commands*   
@@ -83,47 +83,42 @@ You can find my list of available commands with! Hit` *🔰Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD ME TO YOUR GROUP ➕️", url="t.me/My_Asuna_Robot?startgroup=true"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="❗ ABOUT", callback_data="asuna_"),
-        InlineKeyboardButton(text="🔰 COMMANDS", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="🤴 OWNER", url="https://telegram.dog/The_Ghost_Hunter"
+            text="🔰Summon ME🔰",url=f"t.me/{BOT_USERNAME}?startgroup=true"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="📺 Star Wolrd Entertainment",
-            url="https://telegram.dog/fire_world_entertainment",
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="🗨️ Logis", url="https://t.me/AsunaLogUpdate"),
-        InlineKeyboardButton(
-            text="👥 SUPPORT", url="https://telegram.dog/AsunaRobotSupport"
-        ),
+          text="📮 Updates", url="https://t.me/CLIPPED_CROW"
+        ),InlineKeyboardButton(
+           text="🐱 Support", url=f"https://t.me/{SUPPORT_CHAT}"
+         ),
     ],
     [
         InlineKeyboardButton(
-            text="💾 Source Code", url="https://github.com/HuntingBots/AsunaRobot"
+          text="WALLPAPER", url="https://t.me/ani_pix"
+        ),InlineKeyboardButton(
+           text="GROUP", url=f"https://t.me/shhhilence"
+         ),
+    ],
+         
+    
+  [
+        InlineKeyboardButton(
+          text="❕HELP❕", callback_data="help_back"
         ),
     ],
 ]
 
 
 HELP_STRINGS = """
-`Hi.. I'm` [Asuna ⚙️]("https://telegra.ph/file/8cab4bb122cf76702b06d.jpg") 
+`Hi.. I'm` [Hinata Shôyô ⚙️]("https://telegra.ph/file/8cab4bb122cf76702b06d.jpg") 
 `Click on the buttons below to get documentation about specific modules..`"""
 
 
-ASUNA_IMG = "https://telegra.ph/file/7e61fe06a9c02747249b4.png"
+ASUNA_IMG = "https://telegra.ph/file/49a2f0062849c44cd5f21.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via [Paypal](#) or by contacting @The_Ghost_Hunter\
+ You can support the project via [Paypal](#) or by contacting @INTERVIER_RRRR\
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -370,7 +365,7 @@ def asuna_about_callback(update, context):
     query = update.callback_query
     if query.data == "asuna_":
         query.message.edit_text(
-            text=""" ❗ I'm *Asuna*, a powerful group management bot built to help you manage your group easily.
+            text=""" ❗ I'm *Hinata Shôyô*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
@@ -378,7 +373,7 @@ def asuna_about_callback(update, context):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n\n_shasa's licensed under the GNU General Public License v3.0_
-                 \nHere is the [💾Repository](https://github.com/HuntingBots/AsunaRobot).
+                 \nHere is the [💾Repository](https://github.com/tobio-shoyo/Shoyo-new).
                  \n\nIf you have any question about *Asuna*, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -400,8 +395,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..👸 I'm *Asuna*
-                 \nHere is the [Source Code](https://github.com/HuntingBots/AsunaRobot) .""",
+            text=""" Hi..👸 I'm *Hinata Shôyô*
+                 \nHere is the [Source Code](https://github.com/tobio-shoyo/Shoyo-new) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
